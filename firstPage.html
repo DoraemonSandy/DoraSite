@@ -2,7 +2,28 @@
 <head></head>
 <body>
 	<div>
-		hello
+		页面倒计时<span id="timing">10</span>
 	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script>
+	// 	var interval = setInterval(timing(), 1000);
+	// 	function timing(){
+	// 	for(var i=10;i<=0;i--){
+	// 		$('#timing').html(i);
+	// 	}
+	// }
+	$(document).ready(function(){
+		var el = $('#timing');
+		var i=9;
+		var interval = setInterval(function(){
+			el.html(i);
+			console.log(i);
+			i--;
+			if(i<0){
+				clearInterval(interval);
+			}
+		}, 1000);
+	});
+	</script>
 </body>
 </html>

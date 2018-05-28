@@ -1,0 +1,4 @@
+记录代码运行时间：
+console.time();
+>>>代码
+console.timeEnd();
