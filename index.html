@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 <head>
 	<title>厦门理工学院</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="styles/style1.css">
+	<script type=text/javascript>
+			<!--//--><![CDATA[//><!--
+			function menuFix() {
+				var sfEls = document.getElementById("nav").getElementsByTagName("li");
+				for (var i = 0; i < sfEls.length; i++) {
+					sfEls[i].onmouseover = function() {
+						this.className += (this.className.length > 0 ? " " : "") + "sfhover";
+					}
+					// sfEls[i].onMouseDown = function() {
+					// 	this.className += (this.className.length > 0 ? " " : "") + "sfhover";
+					// }
+					// sfEls[i].onMouseUp = function() {
+					// 	this.className += (this.className.length > 0 ? " " : "") + "sfhover";
+					// }
+					sfEls[i].onmouseout = function() {
+						this.className = this.className.replace(new RegExp("( ?|^)sfhover\\b"), "");
+					}
+				}
+			}
+
+
+			window.onload = menuFix;
+			//--><!]]>
+		</script>
 </head>
 <body>
 	<div class="wrap-header">
@@ -15,89 +39,95 @@
 				<li><a href="#">校友校董</a></li>
 				<li><a href="#">考生</a></li>
 			</ul>
-			<ul class="lan">
-				<li><a href="#">English</a></li>
-				<li><a href="#">中文</a></li>
-				<li><a href="#">旧网站</a></li>
-			</ul>
-			<form class="search">
-				<input type="text" value="站内搜索">
-				<input type="image" src="">
-			</form>
+		
+			<div class="search">
+				<form >
+					<input class="search-box" type="text" value="站内搜索">
+					<input class="search-btn" type="image" src="images/search-btn.jpg">
+				</form>
+			</div>
+			<div class="lan">
+				<a href="#">English</a> |
+				<a href="#">中文</a> |
+				<a href="#">旧网站</a>
+			</div>
 		</div>
 		<div class="header-logo">
-			<a href="">
-				<img src="">
+			<div class="logo-area-bg"></div>
+			<a class="logo" href="#">
+				<img src="images/logo.png">
 			</a>
 		</div>
 		<div class="header-nav">
-			<ul>
-				<li><a href="#">首页</a></li>
-				<li>
-					<a href="#">学校概况</a>
-					<ul>
-						<li><a href="#">学校简介</a></li>
-						<li><a href="#">机构设置</a></li>
-						<li><a href="#">学科专业</a></li>
-						<li><a href="#">历史沿革</a></li>
-						<li><a href="#">历任领导</a></li>
-						<li><a href="#">学校标志</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">教育教学</a>
-					<ul>
-						<li><a href="#">师资队伍</a></li>
-						<li><a href="#">本科教育</a></li>
-						<li><a href="#">研究生教育</a></li>
-						<li><a href="#">品质管理</a></li>
-						<li><a href="#">教学成果展</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">教学科研</a>
-					<ul>
-						<li><a href="#">师资队伍</a></li>
-						<li><a href="#">本科教育</a></li>
-						<li><a href="#">研究生教育</a></li>
-						<li><a href="#">品质管理</a></li>
-						<li><a href="#">教学成果展</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">招生就业</a>
-					<ul>
-						<li><a href="#">师资队伍</a></li>
-						<li><a href="#">本科教育</a></li>
-						<li><a href="#">研究生教育</a></li>
-						<li><a href="#">品质管理</a></li>
-						<li><a href="#">教学成果展</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">合作交流</a>
-					<ul>
-						<li><a href="#">师资队伍</a></li>
-						<li><a href="#">本科教育</a></li>
-						<li><a href="#">研究生教育</a></li>
-						<li><a href="#">品质管理</a></li>
-						<li><a href="#">教学成果展</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">校园生活</a>
-					<ul>
-						<li><a href="#">师资队伍</a></li>
-						<li><a href="#">本科教育</a></li>
-						<li><a href="#">研究生教育</a></li>
-						<li><a href="#">品质管理</a></li>
-						<li><a href="#">教学成果展</a></li>
-					</ul>
-				</li>
-			</ul>
+			<div class="nav">
+				<ul id="nav">
+					<li><a href="#">首&nbsp;&nbsp;页</a></li>
+					<li>
+						<a href="#">学校概况</a>
+						<ul class="sub-nav">
+							<li><a href="#">学校简介</a></li>
+							<li><a href="#">机构设置</a></li>
+							<li><a href="#">学科专业</a></li>
+							<li><a href="#">历史沿革</a></li>
+							<li><a href="#">历任领导</a></li>
+							<li><a href="#">学校标志</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">教育教学</a>
+						<ul class="sub-nav">
+							<li><a href="#">师资队伍</a></li>
+							<li><a href="#">本科教育</a></li>
+							<li><a href="#">研究生教育</a></li>
+							<li><a href="#">品质管理</a></li>
+							<li><a href="#">教学成果展</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">科学研究</a>
+						<ul class="sub-nav">
+							<li><a href="#">师资队伍</a></li>
+							<li><a href="#">本科教育</a></li>
+							<li><a href="#">研究生教育</a></li>
+							<li><a href="#">品质管理</a></li>
+							<li><a href="#">教学成果展</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">招生就业</a>
+						<ul class="sub-nav">
+							<li><a href="#">师资队伍</a></li>
+							<li><a href="#">本科教育</a></li>
+							<li><a href="#">研究生教育</a></li>
+							<li><a href="#">品质管理</a></li>
+							<li><a href="#">教学成果展</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">合作交流</a>
+						<ul class="sub-nav">
+							<li><a href="#">师资队伍</a></li>
+							<li><a href="#">本科教育</a></li>
+							<li><a href="#">研究生教育</a></li>
+							<li><a href="#">品质管理</a></li>
+							<li><a href="#">教学成果展</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">校园生活</a>
+						<ul class="sub-nav">
+							<li><a href="#">师资队伍</a></li>
+							<li><a href="#">本科教育</a></li>
+							<li><a href="#">研究生教育</a></li>
+							<li><a href="#">品质管理</a></li>
+							<li><a href="#">教学成果展</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
-
 	</div>
+
 	<div class="wrap-container">
 		
 	</div>
