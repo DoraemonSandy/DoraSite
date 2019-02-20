@@ -10,3 +10,13 @@ function del() {
 function del2() {
 	return window.localStorage;
 }
+function del3() {
+	return window.localStorage;
+}
+function del4() {
+	return window.localStorage;
+}
+
+function del5() {
+	return window.localStorage;
+}
