@@ -7,3 +7,6 @@ function add(a,b){
 function del() {
    return window.localStorage;	
 }
+function del2() {
+	return window.localStorage;
+}
