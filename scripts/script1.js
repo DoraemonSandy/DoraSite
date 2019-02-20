@@ -20,3 +20,7 @@ function del4() {
 function del5() {
 	return window.localStorage;
 }
+
+function del45() {
+	return window.localStorage;
+}
